@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class AppService {
 
-  public apiUrl:string = 'https://localhost:8080/about';
+  private apiUrl:string = "http://localhost:8080/about";
 
   constructor(private _http: HttpClient) { }
 
   public getAboutTest(): Observable<string> {
-    return this._http.get<string>(`${this.apiUrl}/test`);
+    return this._http.get<string>(`${this.apiUrl}/test`,{responseType:'text'});
   }
   public cGetAbout(): Observable<About[]> {
     return this._http.get<About[]>(`${this.apiUrl}/getAbout`);

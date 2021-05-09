@@ -1,11 +1,26 @@
 <h1>Hi Angular started</h1>
+
+
+
 <p>----------------------</p>
-<button (click)="getAboutTest()">Test</button>
+
+<button (click)="getAboutTest()">Click For Test</button>
 <p>----------------------</p>
 
 <div>{{test}}</div>
+
+
+
 <p>----------------------</p>
 
 <div *ngFor="let a of aboutAll">
-  <div>{{a?.name}}</div>
+  <p>{{a?.id}}</p>
+  <p>{{a?.name}}</p>
+  <p>{{a?.emailID}}</p>
+  <p>{{a?.contactNumber}}</p>
+  <p>{{a?.address}}</p>
+  <p>{{a?.degree}}</p>
+  <p>{{a?.college}}</p>
+  <p>{{a?.jobPost}}</p>
+  <p>{{a?.company}}</p>
 </div>
